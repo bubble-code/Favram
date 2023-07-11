@@ -6,7 +6,7 @@ export default class HeroList extends React.Component {
     const { children, items, message } = this.props;
 
     const listItems = items.map((item, index) => (
-      <li className="ms-ListItem" key={index}>
+      <li className="ms-ListItem" key={index} onClick={() => item.click()}>
         <i className={`ms-Icon ms-Icon--${item.icon}`}></i>
         <span className="ms-font-m ms-fontColor-neutralPrimary">{item.primaryText}</span>
       </li>
